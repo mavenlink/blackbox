@@ -1,12 +1,12 @@
-# Ideas for blackbox Version 2
+# Ideas for BlackBox Version 2
 
 I'm writing this to solicit feedback and encourage discussion.
 
-Here are my thoughts on a "verison 2" of blackbox.  This is where
+Here are my thoughts on a "version 2" of BlackBox.  This is where
 I list ideas that would require major changes to the system. They
 might break backwards compatibility, though usually not.
 
-Blackbox grew from a few simple shell scripts used at StackOverflow.com
+BlackBox grew from a few simple shell scripts used at StackOverflow.com
 to a larger system used by dozens (hundreds?) of organizations. Not
 all the design decisions were "forward looking".
 
@@ -75,7 +75,7 @@ Backwards compatibility: This would add a "none" VCS, not remove any existing fu
 
 `bash` is fairly universal. It even exists on Windows.  However it is not the right language for large systems. Writing the acceptance tests is quite a bear.  Managing ".gitignore" files in bash is impossible and the current implementation fails in many cases.
 
-`python` is my second favorite langauge. It would make the code cleaner and more testable. However it is not installed everywhere.  I would also want to write it in Python3 (why start a new project in Python2?) but sadly Python3 is less common.  It is a chicken vs. egg situation.
+`python` is my second favorite language. It would make the code cleaner and more testable. However it is not installed everywhere.  I would also want to write it in Python3 (why start a new project in Python2?) but sadly Python3 is less common.  It is a chicken vs. egg situation.
 
 `go` is my favorite language. I could probably rewrite this in go in a weekend. However, now the code is compiled, not interpreted. Therefore we lose the ability to just "git clone" and have the tools you want.  Not everyone has a Go compiler installed on every machine.
 
@@ -94,4 +94,4 @@ However, I've never used it so I don't have any idea whether git-crypt is any be
 
 Of course, git-crypt doesn't work with SVN, HG, or any other VCS.  Is blackbox's strong point the fact that it support so many VCS systems?  To be honest, it originally only supported HG and GIT because I was at a company that used HG but then changed to GIT.  Supporting anything else was thanks to contributors. Heck, HG support hasn't even been tested recently (by me) since we've gone all git where I work.
 
-How important is this to blackbox users?
+How important is this to BlackBox users?
